@@ -5,6 +5,7 @@ class Smiley:
     WHITE = (255, 255, 255)
     GREEN = (0, 255, 0)
     RED = (255, 0, 0)
+    BLUE = (0, 0, 255)
     YELLOW = (255, 255, 0)
     BLANK = (0, 0, 0)
 
@@ -12,7 +13,7 @@ class Smiley:
         # We have encapsulated the SenseHat object
         self.sense_hat = SenseHat()
 
-        Y = self.YELLOW
+        Y = self.complexion()
         O = self.BLANK
         self.pixels = [
             O, Y, Y, Y, Y, Y, Y, O,
@@ -37,3 +38,9 @@ class Smiley:
         Show the smiley on the screen.
         """
         self.sense_hat.set_pixels(self.pixels)
+
+    def complexion(self):
+        """
+        Returns the complexion of the smiley.
+        """
+        return self.YELLOW

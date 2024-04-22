@@ -24,6 +24,8 @@ if __name__ == '__main__':
     # class, like in other, statically typed, languages.
     smiley.show()
 
+    print("Complexion of the smiley:", smiley.complexion())
+
     # Just a short delay
     time.sleep(1)
 
